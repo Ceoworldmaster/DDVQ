@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Path to Liberation — Prototype</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="game-root">
+      <div id="scene-container">
+        <div id="background"></div>
+        <div id="hotspots"></div>
+        <div id="ui-overlay">
+          <div id="top-bar">
+            <div id="chapter-indicator">Chapter 1: The Departure</div>
+            <div id="stats">
+              <span id="understanding-label">Understanding:</span>
+              <span id="understanding-value">0</span>
+            </div>
+            <div id="buttons">
+              <button id="journal-toggle" aria-expanded="false">Journal</button>
+            </div>
+          </div>
+
+          <div id="dialogue-layer" class="hidden">
+            <div id="dialogue-box">
+              <div id="dialogue-header">
+                <span id="dialogue-character"></span>
+              </div>
+              <div id="dialogue-text"></div>
+              <div id="dialogue-choices"></div>
+              <div id="dialogue-continue" class="hidden">Click to continue…</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="journal-panel" class="hidden" aria-hidden="true">
+        <div id="journal-content">
+          <div id="journal-header">
+            <h2>Journal</h2>
+            <button id="journal-close" aria-label="Close Journal">×</button>
+          </div>
+          <div id="journal-entries"></div>
+        </div>
+      </div>
+
+      <div id="document-modal" class="hidden" aria-hidden="true">
+        <div id="document-content">
+          <div id="document-header">
+            <h3 id="document-title">Document</h3>
+            <button id="document-close" aria-label="Close Document">×</button>
+          </div>
+          <div id="document-body"></div>
+        </div>
+      </div>
+
+      <div id="chapter-transition" class="hidden">Chapter 2: The Ship Deck</div>
+    </div>
+
+    <script src="./game.js"></script>
+  </body>
+  </html>
+
